@@ -81,7 +81,6 @@ void onTrackbarSlide(int pos, void*)
 	//-------------------------------------------------------------------------
 
 #pragma message ("*** add code ***")	// TODO: add your code here.  Replace this line with your code
-	g_cap.set(CAP_PROP_POS_FRAMES, pos);
 
 
 
@@ -155,7 +154,6 @@ int main(int argc, char** argv)
 	//-------------------------------------------------------------------------
 
 #pragma message ("*** add code ***")	// TODO: add your code here.  Replace this line with your code
-	g_cap.open(argv[1]);
 
 
 
@@ -171,7 +169,6 @@ int main(int argc, char** argv)
 	//-------------------------------------------------------------------------
 
 #pragma message ("*** add code ***")	// TODO: add your code here.  Replace this line with your code
-	int frames = (int)g_cap.get(CAP_PROP_FRAME_COUNT);
 
 
 
@@ -187,7 +184,6 @@ int main(int argc, char** argv)
 	//-------------------------------------------------------------------------
 
 #pragma message ("*** add code ***")	// TODO: add your code here.  Replace this line with your code
-	int width = (int)g_cap.get(CAP_PROP_FRAME_WIDTH);
 
 
 
@@ -203,7 +199,6 @@ int main(int argc, char** argv)
 	//-------------------------------------------------------------------------
 
 #pragma message ("*** add code ***")	// TODO: add your code here.  Replace this line with your code
-	int height = (int)g_cap.get(CAP_PROP_FRAME_HEIGHT);
 
 
 
@@ -217,8 +212,6 @@ int main(int argc, char** argv)
 	//-------------------------------------------------------------------------
 
 #pragma message ("*** add code ***")	// TODO: add your code here.  Replace this line with your code
-	cout << "Video has " << frames << " frames of dimensions ("
-		<< width << ", " << height << ").\n\n";
 
 
 
@@ -243,7 +236,6 @@ int main(int argc, char** argv)
 	//-------------------------------------------------------------------------
 
 #pragma message ("*** add code ***")	// TODO: add your code here.  Replace this line with your code
-	namedWindow("Video Display", WINDOW_AUTOSIZE);
 
 
 
@@ -263,7 +255,6 @@ int main(int argc, char** argv)
 	//-------------------------------------------------------------------------
 
 #pragma message ("*** add code ***")	// TODO: add your code here.  Replace this line with your code
-	createTrackbar("Position", "Video Display", &g_slider_position, frames, onTrackbarSlide);
 
 
 
@@ -290,7 +281,6 @@ int main(int argc, char** argv)
 			//-------------------------------------------------------------------------
 
 #pragma message ("*** add code ***")	// TODO: add your code here.  Replace this line with your code
-			g_cap >> frame;
 
 
 
@@ -305,7 +295,6 @@ int main(int argc, char** argv)
 			//-------------------------------------------------------------------------
 
 #pragma message ("*** add code ***")	// TODO: add your code here.  Replace this line with your code
-			if (frame.empty()) break;
 
 
 
@@ -319,7 +308,6 @@ int main(int argc, char** argv)
 			//-------------------------------------------------------------------------
 
 #pragma message ("*** add code ***")	// TODO: add your code here.  Replace this line with your code
-			g_slider_position = (int)g_cap.get(CAP_PROP_POS_FRAMES);
 
 
 
@@ -343,7 +331,6 @@ int main(int argc, char** argv)
 			//-------------------------------------------------------------------------
 
 #pragma message ("*** add code ***")	// TODO: add your code here.  Replace this line with your code
-			setTrackbarPos("Position", "Video Display", g_slider_position);
 
 
 
@@ -357,7 +344,6 @@ int main(int argc, char** argv)
 			//-------------------------------------------------------------------------
 
 #pragma message ("*** add code ***")	// TODO: add your code here.  Replace this line with your code
-			imshow("Video Display", frame);
 
 
 

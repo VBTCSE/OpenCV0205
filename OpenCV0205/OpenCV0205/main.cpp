@@ -80,7 +80,7 @@ void onTrackbarSlide(int pos, void*)
 	// the trackbar.
 	//-------------------------------------------------------------------------
 
-	g_cap.set(CAP_PROP_POS_FRAMES, pos);
+#pragma message ("*** add code ***")	// TODO: add your code here.  Replace this line with your code
 
 
 

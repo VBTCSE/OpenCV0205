@@ -80,8 +80,7 @@ void onTrackbarSlide(int pos, void*)
 	// the trackbar.
 	//-------------------------------------------------------------------------
 
-#pragma message ("*** add code ***")	// TODO: add your code here.  Replace this line with your code
-
+	g_cap.set(CAP_PROP_POS_FRAMES, pos);
 
 
 
@@ -150,7 +149,7 @@ int main(int argc, char** argv)
 
 	//-------------------------------------------------------------------------
 	// Use the open function of the global VideoCapture object to open the video
-	// from a file whose name is in arg[1]
+	// from a file whose name is in argv[1]
 	//-------------------------------------------------------------------------
 
 #pragma message ("*** add code ***")	// TODO: add your code here.  Replace this line with your code
